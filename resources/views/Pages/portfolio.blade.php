@@ -57,16 +57,16 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hero-text">
-                            <h2>Maria Williams</h2>
-                            <p>I’m a digital designer in love with photography, painting and discovering new worlds and cultures.</p>
+                            <h2>{{$post->firstname_lastname}}</h2>
+                            <p>{{$post->short_description}}</p>
                         </div>
                         <div class="hero-info">
                             <h2>General Info</h2>
                             <ul>
-                                <li><span>Date of Birth</span>Aug 25, 1988</li>
-                                <li><span>Address</span>Rosia Road 55, Gibraltar, UK</li>
-                                <li><span>E-mail</span>mariawilliams@company.com</li>
-                                <li><span>Phone </span>+43 5266 22 345</li>
+                                <li><span>Date of Birth</span>{{$post->dob}}</li>
+                                <li><span>Address</span>{{$post->address}}</li>
+                                <li><span>E-mail</span>{{$post->email}}</li>
+                                <li><span>Phone </span>{{$post->phone}}</li>
                             </ul>
                         </div>
                     </div>

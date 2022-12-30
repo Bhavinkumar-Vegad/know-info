@@ -23,9 +23,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', 'App\Http\Con
 })->name('dashboard');
 
 Route::get('/','App\Http\Controllers\PagesController@index');
-Route::get('/portfolio','App\Http\Controllers\PortfolioController@index');
+Route::get('/{id}','App\Http\Controllers\PortfolioController@index');
 Route::resource('posts', 'App\Http\Controllers\PostsController');
-Route::get('/{id}','App\Http\Controllers\ShowController@index');
+//Route::get('/{id}','App\Http\Controllers\ShowController@index');
 
 
 

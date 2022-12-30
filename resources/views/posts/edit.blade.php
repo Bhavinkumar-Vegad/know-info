@@ -32,84 +32,84 @@
 
                         <div class="mb-4 @if($errors->has('firstname_lastname')) has-error @endif">
                             {!! Form::label('Firstname Lastname') !!} <br>
-                            {!! Form::text('firstname_lastname', null, ['class' => 'form-control', 'placeholder' => 'Firstname Lastname']) !!}
+                            {!! Form::text('firstname_lastname', $post->firstname_lastname, ['class' => 'form-control', 'placeholder' => 'Firstname Lastname']) !!}
                             @if ($errors->has('firstname_lastname'))
                                 <span class="help-block">{!! $errors->first('firstname_lastname') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('short_description')) has-error @endif">
                             {!! Form::label('Short Description') !!} <br>
-                            {!! Form::textarea('short_description', null, ['class' => 'form-control', 'placeholder' => 'Short Description']) !!}
+                            {!! Form::textarea('short_description', $post->short_description, ['class' => 'form-control', 'placeholder' => 'Short Description']) !!}
                             @if ($errors->has('short_description'))
                                 <span class="help-block">{!! $errors->first('short_description') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('dob')) has-error @endif">
                             {!! Form::label('DOB') !!} <br>
-                            {!! Form::text('dob', null, ['class' => 'form-control', 'placeholder' => 'DOB']) !!}
+                            {!! Form::date('dob', $post->dob, ['class' => 'form-control', 'placeholder' => 'DOB']) !!}
                             @if ($errors->has('dob'))
                                 <span class="help-block">{!! $errors->first('dob') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('address')) has-error @endif">
                             {!! Form::label('Address') !!} <br>
-                            {!! Form::textarea('address', null, ['class' => 'form-control', 'placeholder' => 'Address']) !!}
+                            {!! Form::textarea('address', $post->address, ['class' => 'form-control', 'placeholder' => 'Address']) !!}
                             @if ($errors->has('address'))
                                 <span class="help-block">{!! $errors->first('address') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('email')) has-error @endif">
                             {!! Form::label('email') !!} <br>
-                            {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'email']) !!}
+                            {!! Form::email('email', $post->email, ['class' => 'form-control', 'placeholder' => 'email']) !!}
                             @if ($errors->has('email'))
                                 <span class="help-block">{!! $errors->first('email') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('phone')) has-error @endif">
                             {!! Form::label('phone') !!} <br>
-                            {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'phone']) !!}
+                            {!! Form::number('phone', $post->phone, ['class' => 'form-control', 'placeholder' => 'phone']) !!}
                             @if ($errors->has('phone'))
                                 <span class="help-block">{!! $errors->first('phone') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('work_details ')) has-error @endif">
                             {!! Form::label('work_details ') !!} <br>
-                            {!! Form::textarea('work_details ', null, ['class' => 'form-control', 'placeholder' => 'work_details ']) !!}
+                            {!! Form::textarea('work_details ', $post->work_details, ['class' => 'form-control', 'placeholder' => 'work_details ']) !!}
                             @if ($errors->has('work_details '))
                                 <span class="help-block">{!! $errors->first('work_details ') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('education_details')) has-error @endif">
                             {!! Form::label('education_details') !!} <br>
-                            {!! Form::textarea('education_details', null, ['class' => 'form-control', 'placeholder' => 'education_details']) !!}
+                            {!! Form::textarea('education_details', $post->education_details, ['class' => 'form-control', 'placeholder' => 'education_details']) !!}
                             @if ($errors->has('education_details'))
                                 <span class="help-block">{!! $errors->first('education_details') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('extra_skills')) has-error @endif">
                             {!! Form::label('extra_skills') !!} <br>
-                            {!! Form::textarea('extra_skills', null, ['class' => 'form-control', 'placeholder' => 'extra_skills']) !!}
+                            {!! Form::textarea('extra_skills', $post->extra_skills, ['class' => 'form-control', 'placeholder' => 'extra_skills']) !!}
                             @if ($errors->has('extra_skills'))
                                 <span class="help-block">{!! $errors->first('extra_skills') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('resume_url')) has-error @endif">
                             {!! Form::label('resume_url') !!} <br>
-                            {!! Form::text('resume_url', null, ['class' => 'form-control', 'placeholder' => 'resume_url']) !!}
+                            {!! Form::text('resume_url', $post->resume_url, ['class' => 'form-control', 'placeholder' => 'resume_url']) !!}
                             @if ($errors->has('resume_url'))
                                 <span class="help-block">{!! $errors->first('resume_url') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('logo_url')) has-error @endif">
                             {!! Form::label('logo_url') !!} <br>
-                            {!! Form::text('logo_url', null, ['class' => 'form-control', 'placeholder' => 'logo_url']) !!}
+                            {!! Form::text('logo_url', $post->logo_url, ['class' => 'form-control', 'placeholder' => 'logo_url']) !!}
                             @if ($errors->has('logo_url'))
                                 <span class="help-block">{!! $errors->first('logo_url') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('tag_line')) has-error @endif">
                             {!! Form::label('tag_line') !!} <br>
-                            {!! Form::textarea('tag_line', null, ['class' => 'form-control', 'placeholder' => 'tag_line']) !!}
+                            {!! Form::textarea('tag_line', $post->tag_line, ['class' => 'form-control', 'placeholder' => 'tag_line']) !!}
                             @if ($errors->has('tag_line'))
                                 <span class="help-block">{!! $errors->first('tag_line') !!}</span>@endif
                         </div>

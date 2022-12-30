@@ -7,9 +7,15 @@ use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
-    public function index()
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Post $post
+     * @return \Illuminate\Http\Response
+     */
+    public function index($id)
     {
-
-        return view('Pages.portfolio');
+        $post = Post::where('id',$id)->first();
+        return view('Pages.portfolio', compact('post'));
     }
 }

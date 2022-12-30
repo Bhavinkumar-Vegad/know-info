@@ -48,7 +48,7 @@
 
                         <div class="mb-4 @if($errors->has('dob')) has-error @endif">
                             {!! Form::label('DOB') !!} <br>
-                            {!! Form::text('dob', null, ['class' => 'form-control', 'placeholder' => 'DOB']) !!}
+                            {!! Form::date('dob', null, ['class' => 'form-control', 'placeholder' => 'DOB']) !!}
                             @if ($errors->has('dob'))
                                 <span class="help-block">{!! $errors->first('dob') !!}</span>@endif
                         </div>
@@ -62,14 +62,14 @@
 
                         <div class="mb-4 @if($errors->has('email')) has-error @endif">
                             {!! Form::label('email') !!} <br>
-                            {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'email']) !!}
+                            {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'email']) !!}
                             @if ($errors->has('email'))
                                 <span class="help-block">{!! $errors->first('email') !!}</span>@endif
                         </div>
 
                         <div class="mb-4 @if($errors->has('phone')) has-error @endif">
                             {!! Form::label('phone') !!} <br>
-                            {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'phone']) !!}
+                            {!! Form::number('phone', null, ['class' => 'form-control', 'placeholder' => 'phone']) !!}
                             @if ($errors->has('phone'))
                                 <span class="help-block">{!! $errors->first('phone') !!}</span>@endif
                         </div>
