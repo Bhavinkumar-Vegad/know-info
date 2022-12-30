@@ -36,15 +36,15 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'post_image' => 'image|nullable|max:1999',
+//            'post_image' => 'image|nullable|max:1999',
             "title" => 'required|unique:posts',
-            "details" => "required",
+//            "details" => "required",
         ],
             [
-                'post_image.required' => 'Enter the post image',
+//                'post_image.required' => 'Enter the post image',
                 'title.required' => 'Enter title',
                 'title.unique' => 'Title already exist',
-                'details.required' => 'Enter details',
+//                'details.required' => 'Enter details',
             ]
         );
 
@@ -69,6 +69,18 @@ class PostsController extends Controller
         $post->user_id = Auth::id();
         $post->post_image = $fileNameToStore;
         $post->title = $request->title;
+        $post->logo_url = $request->logo_url;
+        $post->tag_line = $request->tag_line;
+        $post->firstname_lastname = $request->firstname_lastname;
+        $post->short_description = $request->short_description;
+        $post->dob = $request->dob;
+        $post->address = $request->address;
+        $post->email = $request->email;
+        $post->phone = $request->phone;
+        $post->work_details  = $request->work_details ;
+        $post->education_details = $request->education_details;
+        $post->extra_skills = $request->extra_skills;
+        $post->resume_url = $request->resume_url;
         $post->details = $request->details;
         $post->websitelink = $request->websitelink ?? null;
         $post->is_published = $request->is_published;
@@ -113,15 +125,15 @@ class PostsController extends Controller
     public function update(Request $request, Post $post)
     {
         $this->validate($request, [
-            'post_image' => 'image|nullable|max:1999',
+//            'post_image' => 'image|nullable|max:1999',
             'title' => 'required|unique:posts,title,' . $post->id . ',id', // ignore this id
-            "details" => "required",
+//            "details" => "required",
         ],
             [
-                'post_image.required' => 'Enter the post image',
+//                'post_image.required' => 'Enter the post image',
                 'title.required' => 'Enter the title',
                 'title.unique' => 'Title already exist',
-                'details.required' => 'Enter details',
+//                'details.required' => 'Enter details',
             ]
         );
 
@@ -145,6 +157,18 @@ class PostsController extends Controller
         $post->user_id = Auth::id();
         $post->post_image = $fileNameToStore;
         $post->title = $request->title;
+        $post->logo_url = $request->logo_url;
+        $post->tag_line = $request->tag_line;
+        $post->firstname_lastname = $request->firstname_lastname;
+        $post->short_description = $request->short_description;
+        $post->dob = $request->dob;
+        $post->address = $request->address;
+        $post->email = $request->email;
+        $post->phone = $request->phone;
+        $post->work_details  = $request->work_details ;
+        $post->education_details = $request->education_details;
+        $post->extra_skills = $request->extra_skills;
+        $post->resume_url = $request->resume_url;
         $post->details = $request->details;
         $post->is_published = $request->is_published;
         $post->save();
