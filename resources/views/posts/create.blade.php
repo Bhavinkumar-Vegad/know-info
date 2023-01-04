@@ -26,8 +26,8 @@
 {{--                        </div>--}}
 
                         <div class="mb-4 @if($errors->has('title')) has-error @endif">
-                            {!! Form::label('Title') !!} <br>
-                            {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Title']) !!}
+                            {!! Form::label('Slug') !!} <br>
+                            {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Slug']) !!}
                             @if ($errors->has('title'))
                                 <span class="help-block">{!! $errors->first('title') !!}</span>@endif
                         </div>

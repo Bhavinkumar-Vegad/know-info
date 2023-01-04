@@ -43,7 +43,7 @@ class PostsController extends Controller
             [
 //                'post_image.required' => 'Enter the post image',
                 'title.required' => 'Enter title',
-                'title.unique' => 'Title already exist',
+                'title.unique' => 'Slug already exist',
 //                'details.required' => 'Enter details',
             ]
         );
@@ -132,7 +132,7 @@ class PostsController extends Controller
             [
 //                'post_image.required' => 'Enter the post image',
                 'title.required' => 'Enter the title',
-                'title.unique' => 'Title already exist',
+                'title.unique' => 'Slug already exist',
 //                'details.required' => 'Enter details',
             ]
         );

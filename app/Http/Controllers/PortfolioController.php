@@ -13,9 +13,16 @@ class PortfolioController extends Controller
      * @param  \App\Post $post
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($slug)
     {
-        $post = Post::where('id',$id)->first();
-        return view('Pages.portfolio', compact('post'));
+        $post = Post::where('title',$slug)->first();
+        if($post==null){
+//            $posts = Post::orderBy('id', 'DESC')->where('post_type', 'post')->where('is_published', '1')->paginate(3);
+//            return view('Pages.index', compact('posts'));
+            return view('welcome');
+        }
+        else{
+            return view('Pages.portfolio', compact('post'));
+        }
     }
 }
